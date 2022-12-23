@@ -1,0 +1,26 @@
+# *
+.idea
+!.coveragerc
+!.env
+
+# Docker
+.docker
+deploy.sh
+docker-compose.yml
+docker-compose-swarm.yml
+Dockerfile
+.dockerignore
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*/__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
+env/
+.env/
+venv/
+.venv/

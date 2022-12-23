@@ -1,0 +1,4 @@
+-r prod.txt
+
+# Linting & Formatting
+flake8>=6.0.0,<6.1.0

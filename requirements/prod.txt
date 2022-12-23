@@ -1,0 +1,17 @@
+# Django & DRF
+Django>=4.0,<4.1
+django-cors-headers>=3.11.0,<3.12
+djangorestframework>=3.14.0,<3.15.0
+djangorestframework-simplejwt>=5.2.2,<5.3.0
+django-restql>=0.15,<0.16
+jwt>=1.3.1,<1.4
+psycopg2-binary>=2.9.5,<3.0.0
+
+# OpenAPI - Docs
+drf-yasg>=1.21.4,<1.22
+
+# social auth
+social-auth-app-django>=5.0,<5.1
+
+# Python
+python-dotenv>=0.21.0,<0.22.0
