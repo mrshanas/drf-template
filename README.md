@@ -39,21 +39,21 @@ sudo -u postgres psql
 
 Create a new database and user:
 
-````bash
+```bash
 CREATE DATABASE mydatabase;
 
 CREATE USER myuser WITH PASSWORD 'mypassword';
 
 GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
-``
+```
 
->**Note**: Dont use the username `user` as it will conflict with the command
+> **Note**: Dont use the username `user` as it will conflict with the command
 
 Exit the PostgreSQL command-line interface:
 
 ```bash
 \q
-````
+```
 
 Update the Django settings to use the new database:
 
