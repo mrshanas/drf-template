@@ -35,6 +35,12 @@ Django Rest Framework template for my next projects
     pip install -r requirements/dev.txt
 ```
 
+- Configure Pre-commit (Optional)
+
+```bash
+    pre-commit install && pre-commit run --all-files
+```
+
 - Apply the migrations
 
 ```bash
