@@ -2,3 +2,4 @@
 
 # Linting & Formatting
 flake8>=6.0.0,<6.1.0
+pre-commit>=2.20.0,<2.21.0

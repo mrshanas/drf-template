@@ -4,13 +4,14 @@ from dotenv import load_dotenv
 
 from pathlib import Path
 
-load_dotenv() # load .env variables
+load_dotenv()  # load .env variables
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 # use the variable below if you change the settings directory
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(os.path.join(__file__,os.pardir))))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.abspath(os.path.join(__file__, os.pardir))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -123,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -156,4 +157,3 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'scope']
 SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 
 SOCIAL_USERS_PASSWORD = os.getenv('SECRET_PASSWORD')
-

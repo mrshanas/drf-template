@@ -3,11 +3,12 @@ from django.db import models
 
 from rest_framework_simplejwt.tokens import RefreshToken
 
+
 class User(AbstractUser):
-    email = models.EmailField(unique=True,editable=False)
+    email = models.EmailField(unique=True, editable=False)
     name = models.CharField(max_length=200)
-    username = models.CharField(unique=True,max_length=200)
-    profile_pic = models.URLField(blank=True,null=True)
+    username = models.CharField(unique=True, max_length=200)
+    profile_pic = models.URLField(blank=True, null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

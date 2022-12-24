@@ -5,7 +5,10 @@ Django Rest Framework template for my next projects
 ## Table of Contents
 
 1. [Features](#features)
-1. [Setting Postgres](#setting-up-postgres-on-django-project)
+1. [Getting Started](#getting-started)
+   - [Without Docker](#without-docker)
+   - [With Docker](#with-docker)
+   - [Setting Postgres](#setting-up-postgres-on-django-project)
 
 ### Features
 
@@ -15,7 +18,41 @@ Django Rest Framework template for my next projects
 - Multiple settings environment
 - Auth endpoints
 
-### Setting Up Postgres on Django Project
+### Getting Started
+
+#### Without Docker
+
+- Create a new repository using this repo as a template
+- Create and Activate the virtual env
+
+```bash
+    python -m venv env && source env/bin/activate
+```
+
+- Install the development dependencies
+
+```bash
+    pip install -r requirements/dev.txt
+```
+
+- Apply the migrations
+
+```bash
+    python manage.py migrate
+```
+
+- Run the development server
+
+```bash
+    python manage.py runserver
+```
+
+- Navigate to http://localhost:8000 to view the `OpenAPI` swagger docs
+- Happy hacking!
+
+#### With Docker
+
+#### Setting Up Postgres on Django Project
 
 To set up PostgreSQL on a Linux system, you will need to do the following steps:
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import include,path
+from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -22,14 +22,14 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/users/',include('users.urls')),
+    path('api/users/', include('users.urls')),
 
-     # docs
+    # docs
     path('', schema_view.with_ui(
         'swagger',
         cache_timeout=0
     ),
         name='Schema-Swagger-UI'
     ),
-    path('schema',schema_view.without_ui())
-] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    path('schema', schema_view.without_ui())
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
