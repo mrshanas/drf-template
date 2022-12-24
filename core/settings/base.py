@@ -9,7 +9,7 @@ load_dotenv()  # load .env variables
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
-# use the variable below if you change the settings directory
+# use the variable below if you change the settings directory to point to root folder
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.abspath(os.path.join(__file__, os.pardir))))
 
