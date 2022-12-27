@@ -2,4 +2,4 @@
 
 set -e
 
-echo "hello"
+docker-compose up -d
