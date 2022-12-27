@@ -41,6 +41,8 @@ Django Rest Framework template for my next projects
     pre-commit install && pre-commit run --all-files
 ```
 
+- Setup `localhost` as the db host in `settings.py`
+
 - Apply the migrations
 
 ```bash
@@ -57,6 +59,16 @@ Django Rest Framework template for my next projects
 - Happy hacking!
 
 #### With Docker
+
+- Setup the db host `settings.py` as the container name you specify in `docker-compose.yml`
+
+- Run
+
+```bash
+    docker-compose up
+```
+
+- Happy hacking!
 
 #### Setting Up Postgres on Django Project
 
