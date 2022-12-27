@@ -7,8 +7,8 @@ Django Rest Framework template for my next projects
 1. [Features](#features)
 1. [Getting Started](#getting-started)
    - [Without Docker](#without-docker)
-   - [With Docker](#with-docker)
    - [Setting Postgres](#setting-up-postgres-on-django-project)
+   - [With Docker](#with-docker)
 
 ### Features
 
@@ -20,7 +20,7 @@ Django Rest Framework template for my next projects
 
 ### Getting Started
 
-#### Without Docker
+### Without Docker
 
 - Create a new repository using this repo as a template
 - Create and Activate the virtual env
@@ -56,18 +56,6 @@ Django Rest Framework template for my next projects
 ```
 
 - Navigate to http://localhost:8000 to view the `OpenAPI` swagger docs
-- Happy hacking!
-
-#### With Docker
-
-- Setup the db host `settings.py` as the container name you specify in `docker-compose.yml`
-
-- Run
-
-```bash
-    docker-compose up
-```
-
 - Happy hacking!
 
 #### Setting Up Postgres on Django Project
@@ -128,3 +116,15 @@ DATABASES = {
 ```
 
 By following these steps, you should be able to set up PostgreSQL on your Linux system and use it with Django.
+
+### With Docker
+
+- Setup the db host `settings.py` as the container name you specify in `docker-compose.yml`
+
+- Run
+
+```bash
+    docker-compose up
+```
+
+- Happy hacking!
