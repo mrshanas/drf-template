@@ -6,21 +6,12 @@ services:
     build:
       context: .
     ports:
-      - "80:8000"
-    command: sh -c "python manage.py runserver"
-    # command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver"
+      - "8000:8000"
+    command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
-    environment:
-      - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
-      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
-      - DJANGO_POSTGRES_DB=${DJANGO_POSTGRES_DB}
-      - DJANGO_POSTGRES_USER=${DJANGO_POSTGRES_USER}
-      - DJANGO_POSTGRES_DB_PASSWORD=${DJANGO_POSTGRES_DB_PASSWORD}
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
-      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
-      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
-      - SECRET_PASSWORD=${SECRET_PASSWORD}
+    env_file:
+      - ./.env
     depends_on:
       - db
 
@@ -28,10 +19,7 @@ services:
     image: postgres:13-alpine
     volumes:
       - dev-db-data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=${DJANGO_POSTGRES_DB}
-      - POSTGRES_USER=${DJANGO_POSTGRES_USER}
-      - POSTGRES_PASSWORD=${DJANGO_POSTGRES_DB_PASSWORD}
-
+    env_file:
+      - ./.env
 volumes:
   dev-db-data:
