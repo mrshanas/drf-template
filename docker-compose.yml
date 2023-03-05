@@ -11,7 +11,7 @@ services:
     volumes:
       - .:/app
     env_file:
-      - ./.env
+      - ./.envs/.env.dev
     depends_on:
       - db
 
@@ -20,6 +20,6 @@ services:
     volumes:
       - dev-db-data:/var/lib/postgresql/data
     env_file:
-      - ./.env
+      - ./.envs/.env.db
 volumes:
   dev-db-data:
