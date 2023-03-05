@@ -1,6 +1,6 @@
 FROM python:3.10.6-alpine
 
-LABEL maintainer="mrshanas.com"
+LABEL maintainer="mrshanas.me"
 
 ENV PYTHONUNBUFFERED=1
 
