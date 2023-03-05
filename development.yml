@@ -4,14 +4,15 @@ services:
   api:
     container_name: backend_api
     build:
-      context: .
+      context: ./compose/development/django/Dockerfile
     ports:
       - "8000:8000"
     command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
     env_file:
-      - ./.envs/.env.dev
+      - ./.envs/.development/.django
+      - ./.envs/.development/.database
     depends_on:
       - db
 
@@ -20,6 +21,6 @@ services:
     volumes:
       - dev-db-data:/var/lib/postgresql/data
     env_file:
-      - ./.envs/.env.db
+      - ./.envs/.development/.database
 volumes:
   dev-db-data:

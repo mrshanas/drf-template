@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose up -d
+docker-compose -f production.yml up -d

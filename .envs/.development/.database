@@ -1,0 +1,3 @@
+POSTGRES_DB=starter
+POSTGRES_USER=shanas
+POSTGRES_PASSWORD=password

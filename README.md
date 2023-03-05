@@ -2,7 +2,13 @@
 
 Django Rest Framework template for my next projects
 
-## Table of Contents
+**_Heavily inspired by [Django cookicutter](https://github.com/cookiecutter/cookiecutter-django) and [Vivify DRF Template](https://github.com/Vivify-Ideas/python-django-drf-boilerplate)_**
+
+## Up and Running with Docker
+
+> ...Will be updated soon
+
+<!--## Table of Contents
 
 1. [Features](#features)
 1. [Getting Started](#getting-started)
@@ -128,3 +134,4 @@ By following these steps, you should be able to set up PostgreSQL on your Linux 
 ```
 
 - Happy hacking!
+-->

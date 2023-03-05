@@ -1,0 +1,6 @@
+DJANGO_SETTINGS_MODULE=core.settings.dev
+DJANGO_SECRET_KEY=hcdbbcfuvhdbvihbghhbshxb&88eunjdcnjdcv
+JWT_SECRET_KEY=SJNSJNJSNJSNJNSJNSJ
+GOOGLE_CLIENT_ID=vtvtvtyvyvy
+GOOGLE_CLIENT_SECRET=cxexweswsetrd6trfty
+SECRET_PASSWORD=dxrxxrx
