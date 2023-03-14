@@ -6,10 +6,11 @@ services:
     build:
       context: .
       dockerfile: ./compose/production/django/Dockerfile
-    ports:
-      - "8000:8000"
+    expose:
+      - 8000
     volumes:
       - .:/app
+      - static_volume:/app/static
     env_file:
       - ./.envs/.production/.database
       - ./.envs/.production/.django
@@ -24,8 +25,20 @@ services:
     env_file:
       - ./.envs/.production/.database
 
+  proxy:
+    build:
+      context: ./compose/production/proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - static_volume:/app/static
+    depends_on:
+      - api
+
 volumes:
   prod-db-data:
+  static_volume:
 # version: "3.9"
 
 # services:
