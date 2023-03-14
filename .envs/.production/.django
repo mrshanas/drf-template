@@ -1,6 +1,7 @@
 DJANGO_SETTINGS_MODULE=core.settings.prod
-DJANGO_SECRET_KEY=
-JWT_SECRET_KEY=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-SECRET_PASSWORD=
+DJANGO_SECRET_KEY=irfvhidhzohfuhiorshiorrohgirnnfj
+JWT_SECRET_KEY=ndsfvsifnvfnvk
+ALLOWED_HOSTS=locahost,127.0.0.1
+GOOGLE_CLIENT_ID=sindivndkxfvnkn
+GOOGLE_CLIENT_SECRET=fmpobdfjbpfbjdpfio
+SECRET_PASSWORD=fmbpfmpblmdglmkl
