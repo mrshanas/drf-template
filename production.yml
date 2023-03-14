@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   api:
-    container_name: backend_api
+    container_name: "backend_api"
     build:
       context: .
       dockerfile: ./compose/production/django/Dockerfile
@@ -41,7 +41,7 @@ services:
       - api
 
   letsencrypt:
-    container_name: certbot
+    container_name: "certbot"
     image: certbot/certbot
     command: sh -c "certbot certonly --webroot -w /tmp/acme-challenge/ -d test.mrshanas.me --text --agree-tos --email nassibshaban345@gmail.com --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
     entrypoint: ""
