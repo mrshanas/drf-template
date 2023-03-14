@@ -44,7 +44,7 @@ services:
     volumes:
       - "/etc/letsencrypt:/etc/letsencrypt"
       - "/tmp/acme-challenge:/tmp/acme-challenge"
-    enviroment:
+    environment:
       - TERM=xterm
 
 volumes:
