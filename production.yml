@@ -33,6 +33,10 @@ services:
       - 443:443
     volumes:
       - static_volume:/app/static
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /tmp/acme-challenge:/tmp/acme-challenge
+    networks:
+      - app
     depends_on:
       - api
 
