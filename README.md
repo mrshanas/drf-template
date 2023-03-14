@@ -27,8 +27,10 @@ docker-compose -f development.yml up
 **OR**
 
 ```bash
-    deploy.sh
+    sh deploy.sh
 ```
+
+- Read my blog [post](https://scribbles.mrshanas.me/https-on-docker-containers-using-nginx-and-letsencrypt) on how to Integrate SSL Certificate
 
 <!--## Table of Contents
 
