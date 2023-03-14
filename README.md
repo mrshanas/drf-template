@@ -14,6 +14,22 @@ Run the command below
 docker-compose -f development.yml up
 ```
 
+### Production
+
+- Set up production enviroment [variables](./.envs/.production/)
+
+- Run the command below
+
+```bash
+    docker-compose -f production.yml up -d
+```
+
+**OR**
+
+```bash
+    deploy.sh
+```
+
 <!--## Table of Contents
 
 1. [Features](#features)
