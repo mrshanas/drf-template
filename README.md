@@ -6,7 +6,13 @@ Django Rest Framework template for my next projects
 
 ## Up and Running with Docker
 
-> ...Will be updated soon
+### Locally
+
+Run the command below
+
+```bash
+docker-compose -f development.yml up
+```
 
 <!--## Table of Contents
 
