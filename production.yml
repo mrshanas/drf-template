@@ -33,31 +33,30 @@ services:
       - 443:443
     volumes:
       - static_volume:/app/static
-      - /etc/letsencrypt:/etc/letsencrypt:ro
-      - /tmp/acme-challenge:/tmp/acme-challenge
-    networks:
-      - app
+      # - /etc/letsencrypt:/etc/letsencrypt:ro
+      # - /tmp/acme-challenge:/tmp/acme-challenge
+    # networks:
+    #   - app
     depends_on:
       - api
 
-  letsencrypt:
-    container_name: "certbot"
-    image: certbot/certbot
-    command: sh -c "certbot certonly --webroot -w /tmp/acme-challenge/ -d test.mrshanas.me --text --agree-tos --email nassibshaban345@gmail.com --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
-    entrypoint: ""
-    volumes:
-      - "/etc/letsencrypt:/etc/letsencrypt"
-      - "/tmp/acme-challenge:/tmp/acme-challenge"
-    environment:
-      - TERM=xterm
+  # letsencrypt:
+  #   container_name: "certbot"
+  #   image: certbot/certbot
+  #   command: sh -c "certbot certonly --webroot -w /tmp/acme-challenge/ -d test.mrshanas.me --text --agree-tos --email nassibshaban345@gmail.com --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
+  #   entrypoint: ""
+  #   volumes:
+  #     - "/etc/letsencrypt:/etc/letsencrypt"
+  #     - "/tmp/acme-challenge:/tmp/acme-challenge"
+  #   environment:
+  #     - TERM=xterm
 
 volumes:
   prod-db-data:
   static_volume:
-
-networks:
-  app:
-    driver: bridge
+# networks:
+#   app:
+#     driver: bridge
 # version: "3.9"
 
 # services:
