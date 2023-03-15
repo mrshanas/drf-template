@@ -8,7 +8,7 @@ from django.conf import settings
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings.dev')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings.prod')
     print(settings.BASE_DIR)
     try:
         from django.core.management import execute_from_command_line
